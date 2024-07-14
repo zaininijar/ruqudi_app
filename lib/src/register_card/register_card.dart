@@ -30,17 +30,20 @@ class RegisterCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8)),
                 margin:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-                child: const TextField(
+                child: TextField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                       vertical: 12,
                       horizontal: 0,
                     ),
-                    icon: Icon(
-                      Remix.qr_scan_line,
-                      color: Colors.blueAccent,
-                      size: 32,
+                    icon: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Remix.qr_scan_line,
+                        color: Colors.blueAccent,
+                        size: 32,
+                      ),
                     ),
                   ),
                 ),
