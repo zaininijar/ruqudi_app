@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:remixicon/remixicon.dart';
 import 'package:ruqudi_app/src/components/navigation.dart';
 
 class RegisterCard extends StatelessWidget {
@@ -14,18 +15,36 @@ class RegisterCard extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
+          const Spacer(),
+          SizedBox(
+            width: 200,
+            child: Image.asset('assets/images/real-bank-card.png'),
+          ),
           Column(
             children: [
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 16),
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    labelText: "Text",
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: Colors.indigoAccent),
+                    borderRadius: BorderRadius.circular(8)),
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+                child: const TextField(
+                  decoration: InputDecoration(
                     border: InputBorder.none,
-                    fillColor: Colors.white,
+                    contentPadding: EdgeInsets.symmetric(
+                      vertical: 12,
+                      horizontal: 0,
+                    ),
+                    icon: Icon(
+                      Remix.qr_scan_line,
+                      color: Colors.blueAccent,
+                      size: 32,
+                    ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
           const Spacer(flex: 1),
@@ -33,15 +52,17 @@ class RegisterCard extends StatelessWidget {
             width: double.infinity,
             margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 36),
             decoration: BoxDecoration(
-                color: Colors.indigoAccent,
-                borderRadius: BorderRadius.circular(8)),
+              color: Colors.indigoAccent,
+              borderRadius: BorderRadius.circular(8),
+            ),
             child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  "Register",
-                  style: GoogleFonts.poppins(color: Colors.white),
-                )),
-          )
+              onPressed: () {},
+              child: Text(
+                "Register",
+                style: GoogleFonts.poppins(color: Colors.white),
+              ),
+            ),
+          ),
         ],
       ),
     );

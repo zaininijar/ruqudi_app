@@ -13,46 +13,44 @@ class HomeView extends StatelessWidget {
       appBar: Navigation(
         appBar: AppBar(),
       ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            const Spacer(
-              flex: 1,
-            ),
-            Image.asset('assets/images/credit-card.png'),
-            const Spacer(
-              flex: 1,
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: Colors.indigoAccent),
-              child: TextButton(
-                onPressed: () {
-                  Navigator.restorablePushNamed(
-                    context,
-                    RegisterCard.routeName,
-                  );
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(
-                      Remix.add_fill,
-                      color: Colors.white,
-                    ),
-                    Text(
-                      'Register your card to start payments',
-                      style: GoogleFonts.poppins(color: Colors.white),
-                    )
-                  ],
-                ),
+      body: Column(
+        children: [
+          const Spacer(
+            flex: 1,
+          ),
+          Image.asset('assets/images/real-bank-card.png'),
+          const Spacer(
+            flex: 1,
+          ),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 36),
+            width: double.infinity,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.indigoAccent),
+            child: TextButton(
+              onPressed: () {
+                Navigator.restorablePushNamed(
+                  context,
+                  RegisterCard.routeName,
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    Remix.add_fill,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    'Register your card to start payments',
+                    style: GoogleFonts.poppins(color: Colors.white),
+                  )
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
