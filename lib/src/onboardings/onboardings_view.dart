@@ -7,7 +7,7 @@ import 'package:ruqudi_app/src/home/home_view.dart';
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
 
-  static const routeName = '/onboardings';
+  static const routeName = '/on_boardings';
 
   @override
   OnBoardingViewState createState() => OnBoardingViewState();
@@ -126,11 +126,11 @@ class OnBoardingViewState extends State<OnBoardingView> {
       nextFlex: 0,
       showBackButton: false,
       //rtl: true, // Display as right-to-left
-      back: const Icon(Icons.arrow_back),
-      skip: const Text('Skip', style: TextStyle(fontWeight: FontWeight.w600)),
-      next: const Icon(Icons.arrow_forward),
-      done: const Text('Get Started',
-          style: TextStyle(fontWeight: FontWeight.w600, color: Colors.indigo)),
+      back: const Icon(Icons.arrow_back, color: Colors.blueAccent),
+      skip: Text('Skip', style: GoogleFonts.poppins(color: Colors.blueAccent)),
+      next: const Icon(Icons.arrow_forward, color: Colors.blueAccent),
+      done: Text('Get Started',
+          style: GoogleFonts.poppins(color: Colors.blueAccent)),
       curve: Curves.fastLinearToSlowEaseIn,
       controlsMargin: const EdgeInsets.all(16),
       controlsPadding: kIsWeb
@@ -140,6 +140,7 @@ class OnBoardingViewState extends State<OnBoardingView> {
         size: Size(10.0, 10.0),
         color: Color(0xFFBDBDBD),
         activeSize: Size(22.0, 10.0),
+        activeColor: Colors.blueAccent,
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(25.0)),
         ),

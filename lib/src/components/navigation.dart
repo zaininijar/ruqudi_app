@@ -22,8 +22,19 @@ class Navigation extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: <Widget>[
         TextButton(
-            onPressed: () {}, child: const Icon(Remix.notification_4_line)),
-        TextButton(onPressed: () {}, child: const Icon(Remix.settings_line))
+          onPressed: () {},
+          child: const Icon(
+            Remix.notification_4_line,
+            color: Colors.blueAccent,
+          ),
+        ),
+        TextButton(
+          onPressed: () {},
+          child: const Icon(
+            Remix.settings_line,
+            color: Colors.blueAccent,
+          ),
+        )
       ],
     );
   }
